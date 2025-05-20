@@ -2,7 +2,7 @@ require("dotenv").config();
 
 const app = require("./app.js");
 
-const PORT = 8081 || process.env.PORT;
+const PORT = process.env.PORT || 8081;
 
 app.listen(PORT, () => {
   console.log(`Server is listening at http://localhost:${PORT}`);
