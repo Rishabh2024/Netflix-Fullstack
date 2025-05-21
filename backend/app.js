@@ -62,7 +62,13 @@ app.get("/health-check", (req, res) => {
     data: "Server is running",
   });
 });
-
+app.get("/", (req, res) => {
+  return res.status(200).json({
+    success: true,
+    message: "Welcome to the API",
+  });
+}
+);
 // Default catch all route - 404
 app.all("*", (_req, res) => {
   res.status(404).json({
